@@ -1,3 +1,27 @@
+# Preparation, Anaylsis and Find Bugs
+To run the docker on Windows 10 i had challenges;
+-	Installing all the environment and making the git repository registration
+o	docker-compose up -d db
+o	Pull and run container.
+o	Actual behavior
+-	Docker return error with messages for running the container related with file systems permission
+- Filesharing error on Windows c: disk. 
+Solution: Go to Docker settings > shared drives > check the c: drive shared and enter the admin user credential to get sharing enabled.
+-Nginx running error
+Solution: Go to Docker settings > network > DNS server . change from automaic to fixed ( default is 8.8.8.8 )
+
+After fixing these issues i am able to pull the docker repository and run on Windows 10.
+
+##Analysis:
+
+
+
+
+
+
+
+
+
 # Insight DevOps Engineering Systems Puzzle
 
 ## Table of Contents
