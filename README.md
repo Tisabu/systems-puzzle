@@ -1,4 +1,4 @@
-# Preparation, Anaylsis and Find Bugs
+# Preparation:
 To run the docker on Windows 10 i had challenges;
 -	Installing all the environment and making the git repository registration
 o	docker-compose up -d db
@@ -12,7 +12,7 @@ Solution: Go to Docker settings > network > DNS server . change from automaic to
 
 After fixing these issues i am able to pull the docker repository and run on Windows 10.
 
-# Analysis:
+# Anaylsis and Bug Fix
 
 The docker containers successfully build and was running but i wasn't able to reach from my local pc with http://localhost:8080
 
@@ -56,18 +56,8 @@ I was able to add the items to database via app.py but i wasn't able to list it 
         				
     return print (*arr)
     
-    
-    
-    
-    
-    
-    
-    
+  Finaly i am able to run the app, make the entry and get the listing.
   
-
-
-
-
 
 # Insight DevOps Engineering Systems Puzzle
 
