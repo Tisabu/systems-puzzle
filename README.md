@@ -35,10 +35,34 @@ nginx service was up and running.
 
 Then i started to checking the configuration files;
 
+nginx configuration for proxy port redirection was not correct.it was "80:8080" so that i changed it to "8080:80" in file  conf.d/flaskapp.conf 
 
+Flask server configuration was default port (5000), it should be running on port 50001 so i fixed the con figuration in app.py added 
+app.run(host='0.0.0.0', port=5001)
+Making theses configuration fix i was able to reach the application from my local pc via http://localhost:8080
 
+I was able to add the items to database via app.py but i wasn't able to list it then i add these lines to app.py to see the list of all the entiries in database;
 
+ arr = []
 
+    for item in results:
+        lineItem = {}
+        lineItem["n"] = item.name
+        lineItem["qt"] = item.quantity
+        lineItem["desc"] = item.description
+        lineItem["da"] = item.date_added
+        arr.append(lineItem)
+        				
+    return print (*arr)
+    
+    
+    
+    
+    
+    
+    
+    
+  
 
 
 
