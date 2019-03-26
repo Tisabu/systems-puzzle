@@ -12,7 +12,29 @@ Solution: Go to Docker settings > network > DNS server . change from automaic to
 
 After fixing these issues i am able to pull the docker repository and run on Windows 10.
 
-#Analysis:
+# Analysis:
+
+The docker containers successfully build and was running but i wasn't able to reach from my local pc with http://localhost:8080
+
+CONTAINER ID        IMAGE                     COMMAND                  CREATED             STATUS              PORTS                  NAMES
+038f2b0aa212        nginx:1.13.5              "nginx -g 'daemon of…"   37 hours ago        Up 26 hours         0.0.0.0:8080->80/tcp   systems-puzzle_nginx_1
+5398f43a7850        systems-puzzle_flaskapp   "python app.py"          37 hours ago        Up 26 hours         5001/tcp               systems-puzzle_flaskapp_1
+cd216b451c47        postgres:9.6.5            "docker-entrypoint.s…"   3 days ago          Up 26 hours         5432/tcp               systems-puzzle_db_1
+
+
+Then i check if the apps are running at phyton server. 
+C:\projects\systems-puzzle>docker exec 5398f43a7850 python forms.py
+The apps were running.
+
+I checked the nginx service is up and running
+
+C:\projects\systems-puzzle>docker exec 038f2b0aa212 service nginx status
+nginx is running.
+
+nginx service was up and running.
+
+Then i started to checking the configuration files;
+
 
 
 
