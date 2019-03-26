@@ -29,6 +29,7 @@ The apps were running.
 I checked the nginx service is up and running
 
 C:\projects\systems-puzzle>docker exec 038f2b0aa212 service nginx status
+
 nginx is running.
 
 nginx service was up and running.
