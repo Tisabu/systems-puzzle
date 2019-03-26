@@ -12,7 +12,7 @@ Solution: Go to Docker settings > network > DNS server . change from automaic to
 
 After fixing these issues i am able to pull the docker repository and run on Windows 10.
 
-##Analysis:
+#Analysis:
 
 
 
